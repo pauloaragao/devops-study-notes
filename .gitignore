@@ -1,0 +1,48 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore log files
+logs/
+*.log
+
+# Ignore temporary files
+tmp/
+*.tmp
+
+# Ignore Docker related files
+docker-compose.override.yml
+docker-compose.*.yml
+.env
+
+# Ignore build directories
+build/
+dist/
+
+# Ignore IDE specific files
+.vscode/
+.idea/
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore compiled files
+*.o
+*.so
+*.out
+
+# Ignore coverage reports
+coverage/
+*.lcov
+
+# Ignore Grafana Loki specific files
+grafana/data/
+grafana/logs/
+loki/data/
+loki/logs/
+promtail/data/
+promtail/logs/
