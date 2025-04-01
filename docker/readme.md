@@ -41,7 +41,7 @@ COPY . /app
 ---
 
 ## ADD
-Semelhante ao `COPY`, mas com funcionalidades adicionais, como a extração automática de arquivos `.tar`.
+Semelhante ao `COPY`, mas com funcionalidades adicionais, como a extração automática de arquivos `.tar`. Ou como arquivos remotos também. 
 
 **Exemplo:**
 ```dockerfile
@@ -51,7 +51,7 @@ ADD app.tar.gz /app
 ---
 
 ## LABEL
-Adiciona metadados à imagem, como informações do autor ou descrição.
+Adiciona metadados à imagem, como informações do autor ou descrição. Que podem ser usada para identificar quem executou. Pode usar o comando para verificar (Ex: docker inspect nome-da-imagem) 
 
 **Exemplo:**
 ```dockerfile
