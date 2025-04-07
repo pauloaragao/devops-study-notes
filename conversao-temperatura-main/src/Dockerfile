@@ -1,18 +1,4 @@
-FROM ubuntu:20.04
-
-# Set the environment variables
-ARG NODE_MAJOR=20
-
-# Install nodejs with dependencies
-RUN apt-get update -y && \
-    apt-get install -y ca-certificates curl gnupg && \
-    mkdir -p /etc/apt/keyrings && \
-    curl -fsSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg && \
-    echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x focal main" > /etc/apt/sources.list.d/nodesource.list && \
-    apt-get update -y && \
-    apt-get install -y nodejs && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+FROM node:22.14.0
 
 # Set the working directory
 WORKDIR /app
