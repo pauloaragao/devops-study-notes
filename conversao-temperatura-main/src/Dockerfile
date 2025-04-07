@@ -1,13 +1,16 @@
-FROM node:22.14.0
+FROM node:20.9.0-alpine3.18
 
 # Set the working directory
 WORKDIR /app
 
+# Copy package.json and package-lock.json to the working directory
+COPY package*.json .
+
+# Install the dependencies
+RUN npm install
+
 # Copy the current directory contents into the container at /app
 COPY . .
-
-# Execute npm install to install the dependencies
-RUN npm install
 
 # Initialize the application
 ENTRYPOINT ["node", "server.js"]
